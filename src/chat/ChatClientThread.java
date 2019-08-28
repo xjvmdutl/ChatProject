@@ -20,7 +20,7 @@ public class ChatClientThread extends Thread {
 				if("join:ok".equals(message)) {
 					continue;
 				}
-				if("Bye".equals(message)) {
+				if(message==null) {
 					break;
 				}
 				System.out.println(message);

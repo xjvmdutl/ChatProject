@@ -39,6 +39,7 @@ public class ChatServerThread extends Thread {
 				}else if("quit".equals(tokens[0])) {
 					doQuit(pw);
 					System.out.println(this.nickname+"이 퇴장하셨습니다.");
+					break;
 				}else {
 					ChatServer.log("error : 알수 없는 요청("+tokens[0]+")");
 				}
@@ -48,7 +49,7 @@ public class ChatServerThread extends Thread {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}finally {
-			if(socket.isClosed()==false && socket != null)
+			if(socket.isClosed()==false && socket != null) 
 				try {
 					socket.close();
 				} catch (IOException e) {
@@ -85,7 +86,6 @@ public class ChatServerThread extends Thread {
 		broadcast(this.nickname+":"+message);
 	}
 	private void doQuit(PrintWriter pw) {
-		pw.println("Bye");
 		removeWriter(pw);
 		String data = nickname+"님이 퇴장 하였습니다";
 		broadcast(data);

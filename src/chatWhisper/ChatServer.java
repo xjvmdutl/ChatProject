@@ -1,7 +1,6 @@
 package chatWhisper;
 
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -24,13 +23,6 @@ public class ChatServer {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally {
-			try {
-				if(serverSocket!=null && serverSocket.isClosed()==false)
-				serverSocket.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 	public static void log(String log) {

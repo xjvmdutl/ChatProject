@@ -50,15 +50,7 @@ public class ChatClient {
 			if(sc!=null)
 				sc.close();
 		}
-//			try {
-//				if(socket!=null&&socket.isClosed()==false)
-//					socket.close();
-//				if(sc!=null)
-//					sc.close();
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
+
 	}
 	private static void log(String log) {
 		System.out.println("[Client] "+log);

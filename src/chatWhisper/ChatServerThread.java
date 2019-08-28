@@ -32,6 +32,7 @@ public class ChatServerThread extends Thread {
 					doMessage(tokens[1]);
 				}else if("quit".equals(tokens[0])) {
 					doQuit(person);
+					break;
 				}else if("whisper".equals(tokens[0])){
 					doWhisper(tokens[1],tokens[2],person.getPw());
 				}else {

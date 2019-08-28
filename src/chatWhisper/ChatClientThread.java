@@ -20,6 +20,8 @@ public class ChatClientThread extends Thread {
 				if("join:ok".equals(message)) {
 					continue;
 				}
+				if(message==null)
+					break;
 				System.out.println(message);
 			}
 		} catch (IOException e) {
