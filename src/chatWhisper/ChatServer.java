@@ -15,9 +15,9 @@ public class ChatServer {
 		List<Person> list=new ArrayList<Person>();
 		try {
 			serverSocket = new ServerSocket();
-			String hostAddress =InetAddress.getLocalHost().getHostAddress();
+//			String hostAddress =InetAddress.getLocalHost().getHostAddress();
 			serverSocket.bind(new InetSocketAddress("127.0.0.1",PORT));
-			System.out.println("[TCPServer] binding "+hostAddress+":"+PORT);
+			System.out.println("[TCPServer] binding "+serverSocket.getInetAddress().getHostAddress()+":"+PORT);
 			while(true) {
 				Socket socket=serverSocket.accept();
 				new ChatServerThread(socket,list).start();
