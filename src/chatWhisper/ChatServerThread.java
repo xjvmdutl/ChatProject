@@ -98,7 +98,7 @@ public class ChatServerThread extends Thread {
 			pw.println(nick+"님이 없습니다");
 			return;
 		}
-		per.getPw().println("(귓속말)"+nick+":"+data);
+		per.getPw().println("(귓속말)"+this.person.getName()+":"+data);
 		per.getPw().flush();
 	}
 }
